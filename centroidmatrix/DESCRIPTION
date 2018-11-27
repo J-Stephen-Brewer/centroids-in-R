@@ -1,0 +1,11 @@
+Package: centroidmatrix
+Title: Generates a matrix of centroids in non-Euclidean species space
+Version: 0.0.0.9000
+Authors@R: c(person("Steve", "Brewer", role = c("aut","cre"),
+                    email = "jbrewer@olemiss.edu"), person("Lee","Brewer", role = "aut"))
+Description: Unlike with repeated measures or split-plot analyses of Euclidean distance matrices, one cannot do the between-subjects/whole-plot tests by simply averaging the responses across the repeated measures or split plots. This is because the average of the responses across time points or split plots is NOT equivalent to the between-subjects or whole-plot centroids in non-Euclidean space (Anderson et al. 2008). The centroidmatrix function uses vegdist to generate a Bray-Curtis dissimilarity matrix and then betadisper to produce a matrix of between-subjects or whole-plot subjects centroids, given a species file and a factor file containing a grouping variable. The resulting matrix of centroids can be used as a response file for between-subjects or whole-plot tests in adonis assuming Euclidean distances among centroids. The centroids are averages of Principal Coordinates Analysis axis scores for each level of the grouping variable (i.e., for each “subject” or “whole plot”) using all the Principal Coordinates axes and thus are equivalent to distances among the Bray-Curtis centroids. 
+Depends: R (>= 3.2.4)
+License: What license is it under? GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
